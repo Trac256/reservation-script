@@ -42,4 +42,5 @@ document.querySelector("form").addEventListener("submit", function (e) {
         }
     }
 });
+console.log("✅ reservation_validation.js loaded successfully!");
 </script>
