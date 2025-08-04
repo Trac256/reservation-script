@@ -33,7 +33,7 @@ document.querySelector("form").addEventListener("submit", function (e) {
     const addressInput = document.getElementById('reservation_address');
     if (addressInput) {
         const address = addressInput.value.trim();
-        const plzPattern = /^(55\d{3}|56\d{3}|6[0-4]\d{3}|3[4-7]\d{3}|6[5-8]\d{3})\s+[^\s]+\s+[^\s]+\s+\d+[a-zA-Z]?$/;
+        const plzPattern = /^(55\d{3}|56\d{3}|57\d{3}|6[0-4]\d{3}|3[4-7]\d{3}|6[5-8]\d{3})\s+[^\s]+\s+[^\s]+\s+\d+[a-zA-Z]?$/;
         if (!plzPattern.test(address)) {
             e.preventDefault();
             alert("Μη έγκυρη διεύθυνση! Χρησιμοποιήστε τη μορφή: [PLZ] [Πόλη] [Διεύθυνση] [Αριθμός]\n\nΠαράδειγμα: 55123 Mainz Kaiserstr. 12\nΕπιτρεπόμενοι ταχυδρομικοί κώδικες:\n• Ρηνανία-Παλατινάτο: 55000-55999, 56000-56999, 65000-68999\n• Έσση: 34000-37999, 60000-64999\n• Σάαρλαντ: 66000-66999");
